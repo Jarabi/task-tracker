@@ -6,13 +6,13 @@ const Task = ({ task, onDelete, onToggle }) => {
       className={`task ${task.reminder ? "reminder" : ""}`}
       onDoubleClick={() => onToggle(task.id)}
     >
-      <h3>
+      <h4>
         {task.text}{" "}
         <TiTimes
           style={{ color: "red", cursor: "pointer" }}
           onClick={() => onDelete(task.id)}
         />
-      </h3>
+      </h4>
       <p>{task.day}</p>
     </div>
   );
